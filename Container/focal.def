@@ -33,10 +33,6 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
     export JENA_HOME=/apache-jena-fuseki-5.0.0
     export PATH=$PATH:/usr/java/jdk-22.0.1/bin
 
-%runscript
-    # Start Apache Jena Fuseki
-    $JENA_HOME/fuseki start
-
 %test
     java -version
     curl --version
