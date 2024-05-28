@@ -26,7 +26,7 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
     mkdir -p /root/jupyter-notebooks
 
     # Download notebooks
-    wget -O /root/jupyter-notebooks/lab-sparql-en.ipynb <url-here>
+    wget -O /root/jupyter-notebooks/lab-sparql-en.ipynb https://raw.githubusercontent.com/Mechree/arsenal-apache-jena-fuseki-singularity-container/main/files/lab-sparql-en.ipynb
 
     # Extract the downloads
     tar -xzf jdk-22_linux-x64_bin.tar.gz -C /usr/java
