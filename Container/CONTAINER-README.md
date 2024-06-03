@@ -57,7 +57,7 @@ To build a Singularity container from the `playground.def` file provided in this
 
    - To verify the server is running correctly, do the following: `$JENA_HOME/fuseki status`, and the output should say if Fuseki is running and give its PID.
    - Additionally, you can use the curl command `curl -X GET http://localhost:3030/$/server`, which will output information about the server in JSON format.
-   - Another way to verify the server is to go to use the command `hostname -I` to see the Arsenal server's IP address. In your browser, type in `http://ip-address-here:3030. The apache-jena-fuseki webpage should appear and can be interacted with.
+   - Another way to verify the server is to go to use the command `hostname -I` to see the Arsenal server's IP address. In your browser, type in http://ip-address-here:3030. The apache-jena-fuseki webpage should appear and can be interacted with.
      - **Note**: If two IP addresses appear, use the one on the right.
 
 7. To stop the server, use the command `$JENA_HOME/fuseki stop`
@@ -65,15 +65,14 @@ To build a Singularity container from the `playground.def` file provided in this
 ## Using Jupyter Notebook in a Singularity Container
 
 ```
-# cd /root/jupyter-notebooks
 # jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &
+# jupyter notebook list
 ```
 
-1. Navigate to the jupyter-notebooks directory `cd /root/jupyter-notebooks`
-2. Active server hosting with Jupyter `jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &`
+1. Activate server hosting with Jupyter `jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &`
    - This will run the Jupyter server in the background on port 5000
-3. To view the available URL's `jupyter notebook list'
-4. Copy and paste the URL from `:: /root/jupyter-notebooks` into your browser to gain access to jupyter notebooks features.
+2. To view the available URL's `jupyter notebook list`
+3. Copy and paste the URL from `:: /root/jupyter-notebooks` into your browser to gain access to jupyter notebooks features.
 
 ## Stopping Jupyter Notebooks Server
 

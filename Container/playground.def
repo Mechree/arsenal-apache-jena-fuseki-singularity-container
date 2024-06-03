@@ -45,7 +45,7 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
     export JAVA_HOME=/usr/java/jdk-22.0.1
     export JENA_HOME=/apache-jena-fuseki-5.0.0
     export PATH=$PATH:/usr/java/jdk-22.0.1/bin
-
+    
 %test
     java -version
     curl --version
