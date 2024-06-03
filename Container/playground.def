@@ -4,7 +4,7 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
 
 %post
     # Update and install necessary packages
-    apt-get update
+    apt-get update --fix-missing
     apt-get install -y software-properties-common
     add-apt-repository universe
     apt-get update
@@ -13,8 +13,8 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
     # Upgrade pip
     pip3 install --upgrade pip
 
-    # Install Jupyter using pip3
-    pip3 install jupyter
+    # Install Jupyter and additional packages using pip3
+    pip3 install jupyterlab-server jupyter numpy geopandas rdflib pandas shapely fiona requests colorama ontospy matplotlib tqdm pyproj s2sphere
 
     # Download Java and Apache Jena Fuseki
     wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.tar.gz
@@ -53,3 +53,17 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
     vim --version
     python3 --version
     firefox --version
+    pip3 show jupyter | grep Version
+    pip3 show numpy | grep Version
+    pip3 show geopandas | grep Version
+    pip3 show rdflib | grep Version
+    pip3 show pandas | grep Version
+    pip3 show shapely | grep Version
+    pip3 show fiona | grep Version
+    pip3 show requests | grep Version
+    pip3 show colorama | grep Version
+    pip3 show ontospy | grep Version
+    pip3 show matplotlib | grep Version
+    pip3 show tqdm | grep Version
+    pip3 show pyproj | grep Version
+    pip3 show s2sphere | grep Version

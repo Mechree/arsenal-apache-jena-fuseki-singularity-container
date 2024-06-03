@@ -65,14 +65,16 @@ To build a Singularity container from the `playground.def` file provided in this
 ## Using Jupyter Notebook in a Singularity Container
 
 ```
+# cd /root/jupyter-notebooks
 # jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &
 # jupyter notebook list
 ```
 
-1. Activate server hosting with Jupyter `jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &`
+1. Navigate to the jupyter directory `cd /root/jupyter-notebooks`
+2. Activate server hosting with Jupyter `jupyter notebook --no-browser --allow-root --port=5000 > jupyter.out 2> jupyter.err &`
    - This will run the Jupyter server in the background on port 5000
-2. To view the available URL's `jupyter notebook list`
-3. Copy and paste the URL from `:: /root/jupyter-notebooks` into your browser to gain access to jupyter notebooks features.
+3. To view the available URL's `jupyter notebook list`
+4. Copy and paste the URL from `:: /root/jupyter-notebooks` into your browser to gain access to jupyter notebooks features.
 
 ## Stopping Jupyter Notebooks Server
 
