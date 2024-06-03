@@ -32,8 +32,8 @@ Detailed information about building containers using Singularity can be found [h
 ### CLI Quick Reference
 
 ```
-  # singularity build --remote --force --sandbox --fakeroot focal.sif playground.def
-  # sudo singularity shell --writable focal.sif/
+  # singularity build --remote --force --sandbox --fakeroot playground.sif playground.def
+  # sudo singularity shell --writable playground.sif/
   # $JENA_HOME/fuseki start
   # $JENA_HOME/fuseki status
   # curl -X GET http://localhost:3030/$/server
@@ -49,9 +49,9 @@ To build a Singularity container from the `playground.def` file provided in this
    - **Note**: Use your preferred text editor. VIM is not required.
 3. Copy and paste the contents of `playground.def` from this repo into the local copy of `playground.def` you just created and are currently editing. Save the file and quit, returning to the CLI.
    - Visit this [link](https://docs.sylabs.io/guides/latest/user-guide/definition_files.html) for more information on definition files.
-4. Use the command `singularity build --remote --force --sandbox --fakeroot focal.sif playground.def` to build the container.
+4. Use the command `singularity build --remote --force --sandbox --fakeroot playground.sif playground.def` to build the container.
    - **Note**: This process can take up to several minutes to complete.
-5. To enter the container use `singularity shell --writable focal.sif` command. This "allows you to spawn a new shell within your container and interact with it as though it were a small virtual machine."
+5. To enter the container use `singularity shell --writable playground.sif` command. This "allows you to spawn a new shell within your container and interact with it as though it were a small virtual machine."
    - **Note**: One way to verify that you are inside a singularity container is by looking at the command prompt, which will display `Singularity>` or something similar to `root@DESKTOP-KE54U6:/usr/local/singularity#`.
 6. While inside the container you can use `$JENA_HOME/fuseki start` to start up the apache-jena-fuseki server.
 
